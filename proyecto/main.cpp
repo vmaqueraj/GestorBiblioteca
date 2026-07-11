@@ -18,7 +18,12 @@ int main (){
 	int cant = 0; // Contador de préstamos activos
 	int opc; // La opción elegida por el usuario
 	
-	
+	// Se llena la matriz con "LIBRE"
+	for (int i=0; i<fil; i++){
+		for (int j=0; j<col; j++){
+			mat[i][j] = "LIBRE";
+		}
+	}
 	
 	
 	
