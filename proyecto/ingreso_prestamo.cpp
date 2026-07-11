@@ -49,6 +49,23 @@ void registrarPrestamo(Prestamo reg[100], int &cant) {
 	if (cant < 100){
 		cout << "--------- REGISTRAR PRESTAMO ---------" << endl;
 		
+		cout << "Ingrese el codigo del estudiante: ";
+		cin >> reg[cant].id_alu;
+		
+		cout << "Ingrese el tipo de recurso (Laptop/Libro): ";
+		cin >> reg[cant].tipo;
+		
+		cout << "Ingrese el codigo/ID del recurso: ";
+		cin >> reg[cant].id_rec;
+		
+		cin.ignore();
+		cout << "Ingrese el titulo del libro o marca de la laptop: ";
+		getline(cin, reg[cant].tit);
+		
+		cout << "Prestamo registrado con exito." << endl;
+		
+		cant = cant + 1;
+		
 	} else {
 		cout << "El registro de prestamos esta lleno. Espere que se libere." << endl;
 	}
