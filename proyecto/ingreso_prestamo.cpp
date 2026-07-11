@@ -39,3 +39,18 @@ void registrarIngreso(string mat[11][6]) {
 		cout << "Error: El numero de mesa o silla ingresado no existe." << endl;
 	}
 }
+
+
+
+// Opcion 2
+
+void registrarPrestamo(Prestamo reg[100], int &cant) {
+	// Se valida si hay espacio disponible para hacer prestamos
+	if (cant < 100){
+		cout << "--------- REGISTRAR PRESTAMO ---------" << endl;
+		
+	} else {
+		cout << "El registro de prestamos esta lleno. Espere que se libere." << endl;
+	}
+}
+
