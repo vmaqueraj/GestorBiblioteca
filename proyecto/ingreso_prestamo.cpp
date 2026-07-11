@@ -32,7 +32,7 @@ void registrarIngreso(string mat[11][6]) {
 			mat[f][c] = id_estudiante; // Lo registramos
 			cout << "Ingreso registrado con exito." << endl;
 		} else {
-			cout << "La silla " << silla << " de la mesa " << mesa << "ya esta ocupada." << endl;
+			cout << "La silla " << silla << " de la mesa " << mesa << " ya esta ocupada." << endl;
 		}
 		
 	} else {
