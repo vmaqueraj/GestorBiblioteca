@@ -11,4 +11,7 @@ struct Prestamo {
 	string id_alu; // Código del alumno que lo tiene
 };
 
+// Funcion para Opción 1
+void registrarIngreso(string mat[11][6]);
+
 #endif
