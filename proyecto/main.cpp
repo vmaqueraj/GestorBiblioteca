@@ -50,9 +50,10 @@ int main (){
         // Switch de opciones
         switch(opc) {
         	case 1:
-        		cout << "Opcion en desarrollo por Valeria" << endl;
+        		registrarIngreso(mat);
         		system("pause");
 				break;
+				
         	case 2:
         		cout << "Opcion en desarrollo por Valeria" << endl;
         		system("pause");
