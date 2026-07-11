@@ -44,7 +44,7 @@ void registrarIngreso(string mat[11][6]) {
 
 // Opcion 2
 
-void registrarPrestamo(Prestamo reg[100], int &cant) {
+void registrarPrestamo(Prestamo reg[100], int &cant, string mat[11][6]) {
 	// Se valida si hay espacio disponible para hacer prestamos
 	if (cant < 100){
 		cout << "--------- REGISTRAR PRESTAMO ---------" << endl;
@@ -55,6 +55,30 @@ void registrarPrestamo(Prestamo reg[100], int &cant) {
 		cout << "Ingrese el tipo de recurso (Laptop/Libro): ";
 		cin >> reg[cant].tipo;
 		
+		// Se valida si es Laptop. Uso de Laptop solo en biblioteca
+		if (reg[cant].tipo == "Laptop") {
+			bool encontrado = false;
+			
+			// Buscamos al estudiante
+			for (int i=0; i<11; i++){
+				for (int j=0; j<6; j++){
+					if (mat[i][j] == reg[cant].id_alu){
+						encontrado = true; // Lo encontramos
+						break;
+					}
+				}
+				if (encontrado == true){
+					break;
+				}
+			}
+			
+			if (encontrado == false){
+				cout << "Error: Las laptops son de uso interno." << endl;
+				return;
+			}
+		}
+		
+		// Si es valido se continua aqui 
 		cout << "Ingrese el codigo/ID del recurso: ";
 		cin >> reg[cant].id_rec;
 		
