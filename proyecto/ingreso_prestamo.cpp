@@ -29,8 +29,8 @@ void registrarIngreso(string mat[11][6]) {
 		
 		// Verificar si la posición esta libre
 		if (mat[f][c] == "LIBRE"){
-			
-			
+			mat[f][c] = id_estudiante; // Lo registramos
+			cout << "Ingreso registrado con exito." << endl;
 		} else {
 			cout << "La silla " << silla << " de la mesa " << mesa << "ya esta ocupada." << endl;
 		}
