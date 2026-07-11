@@ -25,8 +25,25 @@ int main (){
 		}
 	}
 	
+	// El menú cíclico de la aplicación
 	
-	
-	
+	do {
+		cout << "=========================================================" << endl;
+        cout << "            UNIBIBLIO - GESTIÓN DE BIBLIOTECA            " << endl;
+        cout << "=========================================================" << endl;
+        cout << "1. Registrar ingreso de estudiante" << endl;
+        cout << "2. Registrar préstamo (Laptop/Libro)" << endl;
+        cout << "3. Procesar salida y devolución total" << endl;
+        cout << "4. Ver mapa de la Biblioteca (Disponibilidad de asientos)" << endl;
+        cout << "5. Tabla de control de recursos prestados" << endl;
+        cout << "6. Buscar estudiante (Localizar ubicación y recursos)" << endl;
+        cout << "7. Salir del sistema" << endl;
+        cout << "=========================================================" << endl;
+        cout << "Elija una opción (1-7): ";
+        cin >> opc;
+        
+        
+	} while (opc != 7);
+		
 	return 0;
 }
