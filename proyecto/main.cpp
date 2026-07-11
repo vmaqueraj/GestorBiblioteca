@@ -32,17 +32,17 @@ int main (){
 		system("cls"); 
 		
 		cout << "=========================================================" << endl;
-        cout << "            UNIBIBLIO - GESTIÓN DE BIBLIOTECA            " << endl;
+        cout << "            UNIBIBLIO - GESTION DE BIBLIOTECA            " << endl;
         cout << "=========================================================" << endl;
         cout << "1. Registrar ingreso de estudiante" << endl;
-        cout << "2. Registrar préstamo (Laptop/Libro)" << endl;
-        cout << "3. Procesar salida y devolución total" << endl;
+        cout << "2. Registrar prestamo (Laptop/Libro)" << endl;
+        cout << "3. Procesar salida y devolucion total" << endl;
         cout << "4. Ver mapa de la Biblioteca (Disponibilidad de asientos)" << endl;
         cout << "5. Tabla de control de recursos prestados" << endl;
-        cout << "6. Buscar estudiante (Localizar ubicación y recursos)" << endl;
+        cout << "6. Buscar estudiante (Localizar ubicacion y recursos)" << endl;
         cout << "7. Salir del sistema" << endl;
         cout << "=========================================================" << endl;
-        cout << "Elija una opción (1-7): ";
+        cout << "Elija una opcion (1-7): ";
         cin >> opc;
         
         system("cls");
