@@ -55,7 +55,7 @@ int main (){
 				break;
 				
         	case 2:
-        		registrarPrestamo(reg, cant);
+        		registrarPrestamo(reg, cant, mat);
         		system("pause");
 				break;
 				
