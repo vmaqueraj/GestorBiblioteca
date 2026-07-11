@@ -14,4 +14,7 @@ struct Prestamo {
 // Funcion para Opción 1
 void registrarIngreso(string mat[11][6]);
 
+// Funcion para Opcion 2
+void registrarPrestamo(Prestamo reg[100], int &cant); // Por referencia para guardar las modificaciones
+
 #endif
