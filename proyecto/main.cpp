@@ -55,9 +55,10 @@ int main (){
 				break;
 				
         	case 2:
-        		cout << "Opcion en desarrollo por Valeria" << endl;
+        		registrarPrestamo(reg, cant);
         		system("pause");
 				break;
+				
         	case 3:
         		cout << "Opcion en desarrollo por Zaida" << endl;
         		system("pause");
