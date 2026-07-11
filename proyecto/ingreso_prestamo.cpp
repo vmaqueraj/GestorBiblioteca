@@ -24,4 +24,11 @@ void registrarIngreso(string mat[11][6]) {
 	f = mesa - 1; // Restamos para que encaje con los indices de C++
 	c = silla - 1;
 	
+	// Verificar si es una posición valida 
+	if (f>= 0 && f<11 && c>=0 && c<6) {
+		
+		
+	} else {
+		cout << "Error: El numero de mesa o silla ingresado no existe." << endl;
+	}
 }
