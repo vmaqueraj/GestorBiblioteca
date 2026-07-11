@@ -27,6 +27,13 @@ void registrarIngreso(string mat[11][6]) {
 	// Verificar si es una posición valida 
 	if (f>= 0 && f<11 && c>=0 && c<6) {
 		
+		// Verificar si la posición esta libre
+		if (mat[f][c] == "LIBRE"){
+			
+			
+		} else {
+			cout << "La silla " << silla << " de la mesa " << mesa << "ya esta ocupada." << endl;
+		}
 		
 	} else {
 		cout << "Error: El numero de mesa o silla ingresado no existe." << endl;
