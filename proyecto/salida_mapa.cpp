@@ -69,3 +69,16 @@ void procesarSalidaEstudiante(Prestamo reg[100], int &cant, string mat[11][6]) {
         cout << "[Aviso] El estudiante no contaba con recursos prestados o el codigo es incorrecto." << endl;
     }
 }
+
+// Opcion 4
+void visualizarMapaSala(string mat[11][6]) {
+    int estudiantes_en_sala = 0;
+    int sillas_disponibles = 0;
+
+    cout << "\n==============================================================================================" << endl;
+    cout << "                                MAPA DE LA SALA DE ESTUDIO (11 MESAS)" << endl;
+    cout << "==============================================================================================" << endl;
+    
+    cout << "          Asiento 1       Asiento 2       Asiento 3       Asiento 4       Asiento 5       Asiento 6" << endl;
+    cout << "----------------------------------------------------------------------------------------------" << endl;
+}
