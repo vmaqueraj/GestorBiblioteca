@@ -25,4 +25,28 @@ void procesarSalidaEstudiante(Prestamo reg[100], int &cant, string mat[11][6]) {
             break;
         }
     }
+    
+     // Liberar silla en caso exista en el sistema
+    if (existe_estudiante) {
+        if (tiene_laptop) {
+            bool silla_liberada = false;
+            for (int i = 0; i < 11; i++) {
+                for (int j = 0; j < 6; j++) {
+                    if (mat[i][j] == id_estudiante) {
+                        mat[i][j] = "LIBRE";
+                        cout << "[!] Silla liberada con exito en la Mesa " << (i + 1) << ", Silla " << (j + 1) << "." << endl;
+                        silla_liberada = true;
+                        break;
+                    }
+                }
+                if (silla_liberada) break;
+            }
+            if (!silla_liberada) {
+                cout << "[Aviso] El estudiante tiene Laptop prestada, pero no se encontro silla asignada en el mapa." << endl;
+            }
+        } else {
+            cout << "[Info] El recurso devuelto es de uso externo (no ocupaba silla en la sala)." << endl;
+        }
+        
+	}
 }
