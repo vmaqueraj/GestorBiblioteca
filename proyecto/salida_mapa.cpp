@@ -26,7 +26,7 @@ void procesarSalidaEstudiante(Prestamo reg[100], int &cant, string mat[11][6]) {
         }
     }
     
-     // Liberar silla en caso exista en el sistema
+     // Libera silla en caso exista en el sistema
     if (existe_estudiante) {
         if (tiene_laptop) {
             bool silla_liberada = false;
@@ -48,5 +48,24 @@ void procesarSalidaEstudiante(Prestamo reg[100], int &cant, string mat[11][6]) {
             cout << "[Info] El recurso devuelto es de uso externo (no ocupaba silla en la sala)." << endl;
         }
         
-	}
+	
+	 // Devuelve los recursos
+        bool recurso_devuelto = false;
+        for (int i = 0; i < cant; i++) {
+            if (reg[i].id_alu == id_estudiante) {
+                cout << "[!] Se devolvio el recurso: " << reg[i].tipo << " (" << reg[i].tit << ")." << endl;
+                
+                // Mueve el último elemento a la posición actual para borrarlo
+                reg[i] = reg[cant - 1];
+                cant--;
+                recurso_devuelto = true;
+                i--; // Decrementa para evaluar el elemento que se acaba de mover
+            }
+        }
+        
+        cout << "Salida procesada correctamente." << endl;
+
+    } else {
+        cout << "[Aviso] El estudiante no contaba con recursos prestados o el codigo es incorrecto." << endl;
+    }
 }
