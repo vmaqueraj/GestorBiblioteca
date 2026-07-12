@@ -29,3 +29,8 @@ void mostrarBitacora(Prestamo reg[], int cant) {
     cout << "==================================================\n";
 }
 
+void buscarEstudiantes(string mat[11][6], Prestamo reg[], int cant){
+	string bus;
+	cout << "\nIngrese el codigo del estudiante a buscar: ";
+	cin >> bus;
+}
