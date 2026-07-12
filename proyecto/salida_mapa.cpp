@@ -98,4 +98,7 @@ void visualizarMapaSala(string mat[11][6]) {
         }
         cout << endl; 
     }
+    cout << "----------------------------------------------------------------------------------------------" << endl;
+    cout << "Total: " << estudiantes_en_sala << " Estudiantes en sala | " << sillas_disponibles << " Sillas disponibles." << endl;
+    cout << "==============================================================================================" << endl;
 }
