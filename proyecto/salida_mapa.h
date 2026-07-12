@@ -7,4 +7,7 @@
 
 using namespace std;
 
+// Opción 3
+void procesarSalidaEstudiante(Prestamo reg[100], int &cant, string mat[11][6]);
+
 #endif
