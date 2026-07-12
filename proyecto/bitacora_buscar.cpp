@@ -34,3 +34,24 @@ void buscarEstudiantes(string mat[11][6], Prestamo reg[], int cant){
 	cout << "\nIngrese el codigo del estudiante a buscar: ";
 	cin >> bus;
 }
+
+void buscarEstudiante(string mat[11][6], Prestamo reg[], int cant) {
+    string bus; 
+    cout << "\nIngrese el codigo del estudiante a buscar: ";
+    cin >> bus;
+
+    int m = -1; 
+    int s = -1; 
+
+    // Recorrido de matrices
+    for (int i = 0; i < 11; i++) {
+        for (int j = 0; j < 6; j++) {
+            if (mat[i][j] == bus) {
+                m = i; 
+                s = j; 
+                break;
+            }
+        }
+        if (m != -1) break;
+    }
+}
