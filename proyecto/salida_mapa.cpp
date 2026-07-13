@@ -1,0 +1,104 @@
+#include <iostream>
+#include <string>
+#include "ingreso_prestamo.h"
+#include "salida_mapa.h"
+
+using namespace std;
+
+// Opcion 3
+void procesarSalidaEstudiante(Prestamo reg[100], int &cant, string mat[11][6]) {
+    cout << "\n-------- PROCESAR SALIDA Y DEVOLUCION --------" << endl;
+    string id_estudiante;
+    cout << "Ingrese el codigo del estudiante que se retira: ";
+    cin >> id_estudiante;
+    
+     //Verifica si el estudiante existe y que tipo de recurso tiene
+    bool existe_estudiante = false;
+    bool tiene_laptop = false;
+
+    for (int i = 0; i < cant; i++) {
+        if (reg[i].id_alu == id_estudiante) {
+            existe_estudiante = true;
+            if (reg[i].tipo == "Laptop") {
+                tiene_laptop = true;
+            }
+            break;
+        }
+    }
+    
+     // Libera silla en caso exista en el sistema
+    if (existe_estudiante) {
+        if (tiene_laptop) {
+            bool silla_liberada = false;
+            for (int i = 0; i < 11; i++) {
+                for (int j = 0; j < 6; j++) {
+                    if (mat[i][j] == id_estudiante) {
+                        mat[i][j] = "LIBRE";
+                        cout << "[!] Silla liberada con exito en la Mesa " << (i + 1) << ", Silla " << (j + 1) << "." << endl;
+                        silla_liberada = true;
+                        break;
+                    }
+                }
+                if (silla_liberada) break;
+            }
+            if (!silla_liberada) {
+                cout << "[Aviso] El estudiante tiene Laptop prestada, pero no se encontro silla asignada en el mapa." << endl;
+            }
+        } else {
+            cout << "[Info] El recurso devuelto es de uso externo (no ocupaba silla en la sala)." << endl;
+        }
+        
+	
+	 // Devuelve los recursos
+        bool recurso_devuelto = false;
+        for (int i = 0; i < cant; i++) {
+            if (reg[i].id_alu == id_estudiante) {
+                cout << "[!] Se devolvio el recurso: " << reg[i].tipo << " (" << reg[i].tit << ")." << endl;
+                
+                // Mueve el último elemento a la posición actual para borrarlo
+                reg[i] = reg[cant - 1];
+                cant--;
+                recurso_devuelto = true;
+                i--; // Decrementa para evaluar el elemento que se acaba de mover
+            }
+        }
+        
+        cout << "Salida procesada correctamente." << endl;
+
+    } else {
+        cout << "[Aviso] El estudiante no contaba con recursos prestados o el codigo es incorrecto." << endl;
+    }
+}
+
+// Opcion 4
+void visualizarMapaSala(string mat[11][6]) {
+    int estudiantes_en_sala = 0;
+    int sillas_disponibles = 0;
+
+    cout << "\n==============================================================================================" << endl;
+    cout << "                                MAPA DE LA SALA DE ESTUDIO (11 MESAS)" << endl;
+    cout << "==============================================================================================" << endl;
+    cout << "          Asiento 1       Asiento 2       Asiento 3       Asiento 4       Asiento 5       Asiento 6" << endl;
+    cout << "----------------------------------------------------------------------------------------------" << endl;
+    
+    for (int i = 0; i < 11; i++) {
+        if (i < 9) cout << "MESA 0" << (i + 1) << ": ";
+        else cout << "MESA " << (i + 1) << ": ";
+
+        for (int j = 0; j < 6; j++) {
+            cout << mat[i][j];
+
+            if (mat[i][j] == "LIBRE") {
+                cout << "           ";
+                sillas_disponibles++;
+            } else {
+                cout << "      ";
+                estudiantes_en_sala++;
+            }
+        }
+        cout << endl; 
+    }
+    cout << "----------------------------------------------------------------------------------------------" << endl;
+    cout << "Total: " << estudiantes_en_sala << " Estudiantes en sala | " << sillas_disponibles << " Sillas disponibles." << endl;
+    cout << "==============================================================================================" << endl;
+}

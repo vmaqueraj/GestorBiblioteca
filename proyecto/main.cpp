@@ -5,7 +5,7 @@
 #include <cstdlib> // Para el system
 
 #include "ingreso_prestamo.h" // Cabecera de Valeria
-// la cabecera de Zaida
+#include "salida_mapa.h" // Cabecera de Zaida
 // la cabecera de Lia
 
 using namespace std;
@@ -29,7 +29,7 @@ int main (){
 	// El menú cíclico de la aplicación
 	
 	do {
-		system("cls"); 
+		system("cls");
 		
 		cout << "=========================================================" << endl;
         cout << "            UNIBIBLIO - GESTION DE BIBLIOTECA            " << endl;
@@ -60,26 +60,26 @@ int main (){
 				break;
 				
         	case 3:
-        		cout << "Opcion en desarrollo por Zaida" << endl;
+        		procesarSalidaEstudiante(reg, cant, mat);
         		system("pause");
 				break;
         	case 4:
-        		cout << "Opcion en desarrollo por Zaida" << endl;
+        		visualizarMapaSala(mat);
         		system("pause");
 				break;
-        	case 5:
+			case 5:
         		cout << "Opcion en desarrollo por Lia" << endl;
         		system("pause");
 				break;
-        	case 6:
+			case 6:
         		cout << "Opcion en desarrollo por Lia" << endl;
         		system("pause");
 				break;
-        	case 7:
+			case 7:
         		cout << "Saliendo del sistema UNIBIBLIO, hasta pronto." << endl;
         		system("pause");
 				break;
-        	default:
+			default:
         		cout << "Opcion no valida. Intente de nuevo." << endl;
         		system("pause");
 		}
