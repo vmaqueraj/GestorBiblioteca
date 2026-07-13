@@ -6,7 +6,7 @@
 
 #include "ingreso_prestamo.h" // Cabecera de Valeria
 #include "salida_mapa.h" // Cabecera de Zaida
-// la cabecera de Lia
+#include "bitacora_buscar.h" // Cabecera de Lia
 
 using namespace std;
 
@@ -63,22 +63,27 @@ int main (){
         		procesarSalidaEstudiante(reg, cant, mat);
         		system("pause");
 				break;
+				
         	case 4:
         		visualizarMapaSala(mat);
         		system("pause");
 				break;
-			case 5:
-        		cout << "Opcion en desarrollo por Lia" << endl;
+				
+        	case 5:
+        		mostrarBitacora(reg, cant);
         		system("pause");
 				break;
-			case 6:
-        		cout << "Opcion en desarrollo por Lia" << endl;
+				
+        	case 6:
+        		buscarEstudiante(mat, reg, cant);
         		system("pause");
 				break;
+				
 			case 7:
         		cout << "Saliendo del sistema UNIBIBLIO, hasta pronto." << endl;
         		system("pause");
 				break;
+				
 			default:
         		cout << "Opcion no valida. Intente de nuevo." << endl;
         		system("pause");
