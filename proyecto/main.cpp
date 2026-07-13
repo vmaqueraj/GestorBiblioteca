@@ -6,7 +6,7 @@
 
 #include "ingreso_prestamo.h" // Cabecera de Valeria
 // la cabecera de Zaida
-// la cabecera de Lia
+#include "bitacora_buscar.h" // Cabecera de Lia
 
 using namespace std;
 
@@ -66,11 +66,11 @@ int main (){
         		system("pause");
 				break;
         	case 5:
-        		cout << "Opcion en desarrollo por Lia" << endl;
+        		mostrarBitacora(reg, cant);
         		system("pause");
 				break;
         	case 6:
-        		cout << "Opcion en desarrollo por Lia" << endl;
+        		buscarEstudiante(mat, reg, cant);
         		system("pause");
 				break;
         	case 7:
