@@ -1,15 +1,15 @@
-*.exe
-
-# Ignorar todos los archivos objeto temporales generados al compilar
+# Ignorar archivos temporales de compilación en cualquier carpeta
 *.o
-proyecto/bitacora_buscar.o
-
-# Ignorar archivos de diseño y configuración de ventanas de Dev-C++
-*.layout
-
-# Ignorar archivos de compilación automática de Dev-C++
 Makefile.win
 
-# Ignorar los archivos ejecutables (.exe) finales para que no pesen en GitHub
+# Ignorar archivos de diseño y pestañas locales de Dev-C++
+*.layout
+
+# Ignorar rastreo de los ejecutables y proyectos antiguos
 Unibiblio
+proyecto/Unibiblio.dev
+proyecto/Unibiblio.layout
+
+# Ignorar los ejecutables nuevos y pesados para que no entren a GitHub
+*.exe
 UniBiblioApp
